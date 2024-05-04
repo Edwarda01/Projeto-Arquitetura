@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root{
+    --color-white: #F9F5F3;
+    --color-dark1: #242321;
+    --color-dark2: #242321;
+    --color-dark3: #242321;
+    --color-dark4: #242321;
+    --color-dark5: #242321;
+    --color-purple: #94897D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--color-white);
+    color: var(--color-white);
+    font-family: 'League Spartan';
+    font-style: normal;
+    color: black;
+}
+
+.img_logo_header{
+    width: 45px;
+    cursor: pointer;
+}
+
+.header,
+.navigation_header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header{
+    background-color: var(--color-dark2);
+    justify-content: space-between;
+    padding: 0 10%;
+    height: 3.5em;
+    box-shadow: 1px 1px 4px var(--color-dark4);
+}
+
+.navigation_header{
+    gap: 3em;
+    z-index: 2;
+}
+
+.content{
+    padding-top: 5em;
+    text-align: center;
+    height: 100vh;
+    transition: 1s;
+}
+
+.navigation_header a{
+    text-decoration: none;
+    color: var(--color-purple);
+    transition: 1s;
+    font-weight: bold;
+}
+
+.navigation_header a:hover{
+    color: var(--color-white);
+}
+
+.active{
+    background: var(--color-dark3);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn_icon_header{
+    background: transparent;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+    display: none;
+}
+
+.imagem {
+    width: 100vw;
+    height: 80vh;
+    background-image: url(/src/interior-plano-vazio-com-elementos-de-decoracao.jpg);
+    background-position: 40% 50%;
+
+    
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo {
+    font-size: 80px;
+    /* padding-left: 70px;
+    padding-top: 100px; */
+    /* text-align: center; */
+    color: #F9F5F3; 
+    /* text-align: center;
+    justify-content: center; */
+}
+
+.textos {
+    width: 60vw;
+    backdrop-filter: blur(4px);
+    height: 40vh;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+    margin-left: 300px;
+    margin-top: 100px;
+
+    border-radius: 10px;
+}
+
+.sub {
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    color: #F9F5F3;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 100px;
+    padding-right: 10px;
+}
+
+h3 {
+    color: #242321;
+}
+
+.texot-sobre { 
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: end;
+    justify-content: end;
+    padding-right: 10px;
+}
+
+
+.sub-sobre {
+    width: 20vw;
+    height: 10vh;
+    padding-top: 20px;
+    color: #7a7168;
+}
+
+.instagram {
+    transition: 0.3s;
+    color: #91918e;
+    text-decoration: none;
+    background-color: #4e4e4e;
+}
+
+.instagram:hover {
+    color: #312c2c;
+    background-color: #b9b6b6;
+    font-size: 20px;
+}
+
+.gmail {
+    transition: 0.3s;
+    color: #91918e;
+    text-decoration: none;
+    background-color: #4e4e4e;
+}
+
+.gmail:hover {
+    color: #312c2c;
+    background-color: #b9b6b6;
+    font-size: 20px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #242321;
+    color: var(--color-purple);
+    height: 18vh;
+    margin-top: 20px;
+}
+
+.contatos-txt {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.Icons {
+    display: flex;
+    column-count: 3;
+    column-gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.icone {
+    width: 2%;
+
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.icone:hover {
+    color: #94897D;
+    width: 4%;
+}  
+
+@media screen and (max-width: 768px) {
+    .navigation_header{
+        position: absolute;
+        flex-direction: column !important;
+        top: 0;
+        background: var(--color-dark5);
+        height: 100%;
+        width: 35vw;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+    .btn_icon_header{
+        display: block;
+    }
+}
+@keyframes showSidebar {
+    from {margin-left: -100vw;}
+    to {margin-left: -10vw;}
+}
+
